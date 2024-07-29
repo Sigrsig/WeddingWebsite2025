@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MenuList, MenuListItem, Separator, Button, AppBar } from "react95";
+import Draggable from "react-draggable";
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -24,17 +25,21 @@ function Nav() {
               }}
               onClick={() => setOpen(false)}
             >
-              <MenuListItem>
+              <MenuListItem
+                onClick={() => {
+                  window.location.href = "/event";
+                }}
+              >
                 <span role="img" aria-label="👨‍💻">
                   👨‍💻
                 </span>
-                Profile
+                Event Info
               </MenuListItem>
               <MenuListItem>
                 <span role="img" aria-label="📁">
                   📁
                 </span>
-                My account
+                FAQ
               </MenuListItem>
               <Separator />
               <MenuListItem disabled>

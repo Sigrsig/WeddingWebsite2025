@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import Event from "./components/pages/Event";
 
 //W95 things
 import original from "react95/dist/themes/original";
@@ -30,15 +31,18 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 function App() {
+  const url = window.location.origin;
+
   return (
     <>
       <GlobalStyles />
       <ThemeProvider theme={original}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/event" element={""} />
-          <Route path="/faq" element={""} />
-          <Route path="/schedule" element={""} />
+          <Route path="/" element={<Home />}>
+            <Route path="event" element={<Event />} />
+            <Route path="faq" element={""} />
+            <Route path="schedule" element={""} />
+          </Route>
         </Routes>{" "}
       </ThemeProvider>
     </>

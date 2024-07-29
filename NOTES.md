@@ -1,5 +1,10 @@
 General notes
 
+TODO:
+
+- Make windows draggable
+- Add close button to Event window
+
 Needed info:
 
 - Main
