@@ -9,7 +9,6 @@ function Home() {
   return (
     <div className="home">
       <Outlet />
-      <img src={wallpaper} style={{ width: "100vw" }} />
       <Nav />
     </div>
   );

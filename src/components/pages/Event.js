@@ -18,9 +18,13 @@ function Event() {
       <Window className="window">
         <WindowHeader>
           <span>Event</span>
-          {/* <Button>
-            <span className="close-icon" />
-          </Button> */}
+          <Button
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
+            X
+          </Button>
         </WindowHeader>
         <WindowContent className="window-content"></WindowContent>
 
